@@ -1,0 +1,431 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.zhuomianbuju {
+  height: 100vh;
+}
+
+.zuocecaidan {
+  height: 100vh;
+}
+
+.caidanlogo {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10px;
+  gap: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logogutupian {
+  height: 28px;
+  width: 28px;
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+.dingbutoubu {
+  background: #ffffff !important;
+  padding: 0 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.neirongquyu {
+  margin: 16px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 6px;
+  overflow-y: auto;
+  height: calc(100vh - 64px - 32px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+/* 项目管理页：卡片悬浮上浮效果 */
+.xiangmuguanli .ant-card {
+  transition: all 0.2s;
+}
+
+.xiangmuguanli .ant-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* 任务管理页：任务列表项悬浮高亮 */
+.renwuguanli .ant-list-item {
+  transition: background-color 0.2s;
+  border-radius: 6px;
+}
+
+.renwuguanli .ant-list-item:hover {
+  background-color: #fafafa;
+}
+
+/* ================= 工作台首页 ================= */
+.gongzuotaishouye {
+  padding-bottom: 8px;
+}
+
+.gongzuotaishouye .ant-card {
+  border-radius: 12px;
+}
+
+/* 渐变欢迎横幅 */
+.shouye-banner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 28px 32px;
+  border-radius: 14px;
+  overflow: hidden;
+  color: #ffffff;
+  background: linear-gradient(135deg, #3b5bdb 0%, #6d4adb 55%, #9254de 100%);
+  box-shadow: 0 8px 24px rgba(80, 70, 229, 0.28);
+}
+
+.shouye-banner::after {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -60px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.shouye-banner::before {
+  content: '';
+  position: absolute;
+  right: 110px;
+  bottom: -110px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.shouye-banner-left {
+  position: relative;
+  z-index: 1;
+}
+
+.shouye-greeting {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.shouye-subtitle {
+  margin-top: 8px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.shouye-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.shouye-banner-right {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.shouye-ring {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shouye-ring-value {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.shouye-ring-label {
+  margin-top: 4px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* 统计卡片 */
+.shouye-stat-card {
+  transition: all 0.25s ease;
+}
+
+.shouye-stat-card .ant-card-body {
+  padding: 20px;
+}
+
+.shouye-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.shouye-stat {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.shouye-stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  font-size: 22px;
+}
+
+.shouye-stat-icon.blue {
+  color: #3b5bdb;
+  background: #e8f0ff;
+}
+
+.shouye-stat-icon.purple {
+  color: #7048e8;
+  background: #f3ebff;
+}
+
+.shouye-stat-icon.green {
+  color: #18a058;
+  background: #e9f9ef;
+}
+
+.shouye-stat-icon.orange {
+  color: #d97706;
+  background: #fff4e6;
+}
+
+.shouye-stat-value {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #1f1f1f;
+}
+
+.shouye-stat-title {
+  margin-top: 2px;
+  font-size: 13px;
+  color: #8c8c8c;
+}
+
+/* 面板标题 */
+.shouye-card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+/* 任务完成情况 */
+.shouye-progress-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 12px 0;
+}
+
+.shouye-progress-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+  color: #595959;
+}
+
+.legend-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-row b {
+  color: #1f1f1f;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.legend-dot.green {
+  background: #18a058;
+}
+
+.legend-dot.orange {
+  background: #faad14;
+}
+
+.legend-dot.gray {
+  background: #bfbfbf;
+}
+
+/* 各项目进度列表 */
+.shouye-project-list {
+  max-height: 236px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.shouye-project-item {
+  padding: 10px 12px;
+  border-radius: 10px;
+  transition: background-color 0.2s;
+}
+
+.shouye-project-item + .shouye-project-item {
+  margin-top: 4px;
+}
+
+.shouye-project-item:hover {
+  background: #f7f8ff;
+}
+
+.shouye-project-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.shouye-project-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.shouye-project-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.shouye-project-bar .ant-progress {
+  flex: 1;
+  margin: 0;
+}
+
+.shouye-project-count {
+  min-width: 56px;
+  font-size: 12px;
+  color: #8c8c8c;
+  text-align: right;
+}
+
+/* 快捷操作入口 */
+.shouye-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.shouye-quick-card {
+  flex: 1;
+  min-width: 260px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.shouye-quick-card:hover {
+  transform: translateY(-2px);
+  border-color: #c7d2fe;
+  box-shadow: 0 8px 20px rgba(80, 70, 229, 0.12);
+}
+
+.shouye-quick-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.shouye-quick-icon.blue {
+  color: #3b5bdb;
+  background: #e8f0ff;
+}
+
+.shouye-quick-icon.purple {
+  color: #7048e8;
+  background: #f3ebff;
+}
+
+.shouye-quick-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.shouye-quick-desc {
+  margin-top: 2px;
+  font-size: 12px;
+  color: #8c8c8c;
+}
+
+.shouye-quick-arrow {
+  margin-left: auto;
+  color: #bfbfbf;
+  transition: all 0.2s;
+}
+
+.shouye-quick-card:hover .shouye-quick-arrow {
+  color: #7048e8;
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .shouye-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+  }
+}

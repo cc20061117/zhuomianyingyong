@@ -1,0 +1,76 @@
+/* 工作台首页样式（基础视觉沿用 App.css 中的 .shouye-* 设计，此处为首页补充样式） */
+
+/* 顶部横幅与统计卡片之间的间距 */
+.gongzuotaishouye .shouye-banner {
+  margin-bottom: 16px;
+}
+
+/* 统计卡片数值单位（个 / 项 / %） */
+.shouye-stat-unit {
+  margin-left: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #8c8c8c;
+}
+
+/* 卡片标题右侧的辅助说明 */
+.shouye-card-extra {
+  font-size: 13px;
+  color: #8c8c8c;
+}
+
+.shouye-extra-num {
+  color: #faad14;
+}
+
+/* 右侧栏纵向排布 */
+.shouye-side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+}
+
+/* 实训小贴士卡片 */
+.shouye-tip {
+  padding: 18px 20px;
+  border-radius: 12px;
+  border: 1px solid #e6f4ff;
+  background: linear-gradient(135deg, #f0f7ff 0%, #f6ffed 100%);
+}
+
+.shouye-tip-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1677ff;
+}
+
+.shouye-tip-text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 22px;
+  color: #595959;
+}
+
+/* 项目名称过长时省略，避免撑破卡片 */
+.shouye-project-name {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 快捷通道在窄屏下纵向排列 */
+@media (max-width: 768px) {
+  .shouye-quick {
+    flex-direction: column;
+  }
+
+  .shouye-project-name {
+    max-width: 180px;
+  }
+}
